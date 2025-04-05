@@ -1,0 +1,221 @@
+﻿CREATE DATABASE QLTV
+GO
+
+
+USE QLTV
+Go
+
+---------------Create table----------------
+
+--Create Category
+CREATE TABLE Category
+(
+	CategoryID INT IDENTITY PRIMARY KEY ,
+	NameCate NVARCHAR(100) NOT NULL
+)
+
+--Create Author
+CREATE TABLE Author
+(
+	AuthorID INT IDENTITY PRIMARY KEY,
+	AuthorName NVARCHAR(100) NOT NULL ,
+	Gender NVARCHAR(3),
+	HomeLand NVARCHAR(50) 
+)
+
+
+CREATE TABLE Area 
+(
+	AreaID INT IDENTITY PRIMARY KEY ,
+	AreaName NVARCHAR(100)
+)
+CREATE TABLE Row 
+(
+	RowID INT IDENTITY PRIMARY KEY ,
+	RowName NVARCHAR(100)
+)
+CREATE TABLE Compartment
+(
+	CompartmentID INT IDENTITY PRIMARY KEY ,
+	CompartmentName NVARCHAR(100)
+)
+CREATE TABLE Location
+(
+	LocationID INT IDENTITY PRIMARY KEY,
+	AreaID INT ,
+	RowID INT,
+	CompartmentID INT,
+	FOREIGN KEY (AreaID) REFERENCES Area(AreaID),
+	FOREIGN KEY (RowID) REFERENCES Row(RowID),
+	FOREIGN KEY (CompartmentID) REFERENCES Compartment(CompartmentID),
+	
+)
+
+--Create Book
+CREATE TABLE Book
+(
+	BookID INT IDENTITY NOT NULL PRIMARY KEY,
+	NameBook NVARCHAR(100),
+	Quanlity INT ,
+	AuthorID INT , 
+	CategoryID INT,
+	LocationID INT,
+	PublishYear INT, --NĂM XUẤT BẢN
+	FOREIGN KEY (AuthorID) REFERENCES Author(AuthorID),
+	FOREIGN KEY (CategoryID) REFERENCES Category(CategoryID),
+	FOREIGN KEY (LocationID) REFERENCES Location(LocationID)
+)
+
+
+
+--Create Account
+CREATE TABLE Account
+(
+	AccountID INT IDENTITY PRIMARY KEY,
+	AccountName NVARCHAR(100) NOT NULL,
+	PassWord NVARCHAR(100) NOT NULL
+)
+
+--Create Member
+CREATE TABLE MemBer
+(
+	MemberID INT IDENTITY PRIMARY KEY,
+	MemberName NVARCHAR(100) NOT NULL,
+	PhoneNumber NVARCHAR(100),
+	IDCard NVARCHAR(100),
+	StartDay DATETIME,
+	EndDay DATETIME
+)
+
+--Create SlipBorrow
+
+CREATE TABLE BookBorrow
+(
+	BorrowID INT IDENTITY PRIMARY KEY,
+	BorrowDay DATETIME,
+	PayDay DATETIME,
+	MemberID INT,
+	FOREIGN KEY (MemberID) REFERENCES Member(MemberID) ON DELETE CASCADE
+)
+
+--Create DetailSlipBorrow
+
+CREATE TABLE DetailBookBorrow
+(
+	DetailID INT IDENTITY PRIMARY KEY,
+	NumBer INT,
+	BookID INT,
+	BorrowID INT,
+	FOREIGN KEY (BookID) REFERENCES Book(BookID) ON DELETE CASCADE,
+	FOREIGN KEY (BorrowID) REFERENCES BookBorrow (BorrowID) ON DELETE CASCADE
+)
+CREATE TABLE Supplier
+(
+	SupplierID INT IDENTITY PRIMARY KEY,
+	SupplierName NVARCHAR(100),
+	Phone NVARCHAR(100),
+	Address NVARCHAR(100)
+
+)
+
+CREATE TABLE ImportBooks
+(
+	ImportID INT IDENTITY PRIMARY KEY , 
+	ImportDay DATETIME ,
+	SupplierID INT,
+	FOREIGN KEY (SupplierID) REFERENCES Supplier(SupplierID),
+
+)
+
+CREATE TABLE DetailImportBooks
+(
+	DetailIDImport INT IDENTITY PRIMARY KEY,
+	QuanlityImport INT ,
+	Price DECIMAL,
+	Total DECIMAL,
+	BookID INT ,
+	ImportID INT,
+	FOREIGN KEY (BookID) REFERENCES Book(BookID) ON DELETE CASCADE,
+	FOREIGN KEY (ImportID) REFERENCES ImportBooks(ImportID) ON DELETE CASCADE,
+)
+
+
+CREATE TABLE Penalize
+(
+	PenalizeID INT IDENTITY PRIMARY KEY,
+	MemberID INT,
+	BorrowID INT,
+	NumberDay INT,
+	Date Datetime,
+	PricePenalize FLOAT,
+	FOREIGN KEY (MemberID) REFERENCES MemBer(MemberID),
+	FOREIGN KEY (BorrowID) REFERENCES BookBorrow(BorrowID) ON DELETE CASCADE,
+)
+
+
+--INSERT INTO
+
+INSERT INTO Account VALUES('admin','123');
+
+INSERT INTO Category VALUES(N'Chính Trị');
+INSERT INTO Category VALUES(N'Đồ Án');
+INSERT INTO Category VALUES(N'Tài Liệu');
+INSERT INTO Category VALUES(N'Báo Trí');
+
+INSERT INTO Author VALUES (N'Phan Minh Trị' , N'Nam' , N'Hà Tĩnh')
+INSERT INTO Author VALUES (N'Trần Văn Phát' , N'Nam' , N'Cần Thơ')
+INSERT INTO Author VALUES (N'Lê Thị Ánh Phương' , N'Nữ' , N'Bình Định')
+INSERT INTO Author VALUES (N'Nguyễn Thị Ánh' , N'Nữ' , N'Hồ Chí Minh')
+
+INSERT INTO Area VALUES(N'Khu A')
+INSERT INTO Area VALUES(N'Khu B')
+INSERT INTO Area VALUES(N'Khu C')
+
+INSERT INTO Row VALUES (N'Hàng 1')
+INSERT INTO Row VALUES (N'Hàng 2')
+INSERT INTO Row VALUES (N'Hàng 3')
+
+INSERT INTO Compartment VALUES(N'Ngăn 1')
+INSERT INTO Compartment VALUES(N'Ngăn 2')
+INSERT INTO Compartment VALUES(N'Ngăn 3')
+
+INSERT INTO Supplier VALUES(N'Nhà sách Nguyễn Văn Cừ' , '084556244' , N'TP HCM')
+INSERT INTO Supplier VALUES(N'Nhà Sách Trần Quỳnh' , '021455476' , N'TP ĐÀ Nẵng')
+INSERT INTO Supplier VALUES(N'Nhà Sách Hùng Vương' , '011547841' , N'TP CẦN THƠ')
+INSERT INTO Supplier VALUES(N'Nhà Sách Lê Lợi' , '2036884241' , N'TP HÀ NỘI')
+
+INSERT INTO MemBer VALUES(N'Phan Minh Thành','0123774957','9054871364','2023-11-1','2024-1-1')
+INSERT INTO MemBer VALUES(N'Lê Thanh Thoa','098145714','9901417451','2023-11-25','2023-12-25')
+INSERT INTO MemBer VALUES(N'Trương Phan Minh','0841547150','9026588741','2023-11-28','2023-12-28')
+INSERT INTO MemBer VALUES(N'Phan Chính Danh','0123774957','9054871364','2023-11-28','2023-12-28')
+
+INSERT INTO Location VALUES (1,2,2)
+INSERT INTO Location VALUES (2,1,1)
+INSERT INTO Location VALUES (3,3,3)
+INSERT INTO Location VALUES (3,1,1)
+INSERT INTO Location VALUES (1,1,3)
+INSERT INTO Location VALUES (2,1,3)
+
+
+INSERT INTO Book VALUES(N'Lập Trình C# căn bản' , 20 , 1 , 3, 1,N'2000')
+INSERT INTO Book VALUES(N'Triết Học' , 30 , 2 , 1, 2,N'2006')
+INSERT INTO Book VALUES(N'LẬP TRÌNH CĂN BẢN C' , 20 , 4 , 3, 3,2007)
+INSERT INTO Book VALUES(N'MÔ HÌNH DỮ LIỆU' , 50 , 3 , 3, 4,2001)
+INSERT INTO Book VALUES(N'ĐỒ ÁN CS1' , 50 , 4 , 2, 5,1870)
+INSERT INTO Book VALUES(N'ĐỒ ÁN CS2' , 30 , 3 , 2, 6,1543)
+
+
+INSERT INTO ImportBooks VALUES('2023-10-20',1)
+INSERT INTO ImportBooks VALUES('2023-10-22',2)
+INSERT INTO ImportBooks VALUES('2023-11-1',3)
+INSERT INTO ImportBooks VALUES('2023-11-16',4)
+INSERT INTO ImportBooks VALUES('2023-12-1',3)
+INSERT INTO ImportBooks VALUES('2023-10-8',1)
+
+INSERT INTO DetailImportBooks VALUES (50,15000,100*15000,5,1)
+INSERT INTO DetailImportBooks VALUES (30,20000,150*20000,6,2)
+INSERT INTO DetailImportBooks VALUES (50,22000,50*22000,4,3)
+INSERT INTO DetailImportBooks VALUES (20,10000,20*10000,3,4)
+INSERT INTO DetailImportBooks VALUES (30,30000,30*30000,2,5)
+INSERT INTO DetailImportBooks VALUES (20,15000,10*15000,1,6)
+ 

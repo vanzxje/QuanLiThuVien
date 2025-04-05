@@ -1,0 +1,74 @@
+D:\DACS2\QLTV\QLTV\bin\Debug\QLTV.exe
+D:\DACS2\QLTV\QLTV\bin\Debug\QLTV.pdb
+D:\DACS2\QLTV\QLTV\obj\Debug\QLTV.csproj.AssemblyReference.cache
+D:\DACS2\QLTV\QLTV\obj\Debug\QLTV.FormMain.resources
+D:\DACS2\QLTV\QLTV\obj\Debug\QLTV.FormQuanLi.resources
+D:\DACS2\QLTV\QLTV\obj\Debug\QLTV.Properties.Resources.resources
+D:\DACS2\QLTV\QLTV\obj\Debug\QLTV.csproj.GenerateResource.cache
+D:\DACS2\QLTV\QLTV\obj\Debug\QLTV.csproj.CoreCompileInputs.cache
+D:\DACS2\QLTV\QLTV\obj\Debug\QLTV.exe
+D:\DACS2\QLTV\QLTV\obj\Debug\QLTV.pdb
+D:\DACS2\QLTV\QLTV\obj\Debug\QLTV.FormLogin.resources
+D:\DACS2\QLTV\QLTV\obj\Debug\QLTV.FormEditAccount.resources
+D:\DACS2\QLTV\QLTV\obj\Debug\QLTV.FormBookBorrow.resources
+D:\DACS2\QLTV\QLTV\obj\Debug\QLTV.FormPayBook.resources
+D:\DACS2\QLTV\QLTV\obj\Debug\QLTV.FormImportBook.resources
+D:\DACS2\QLTV\QLTV\obj\Debug\QLTV.FormPenalize.resources
+D:\DACS2\QLTV\QLTV\obj\Debug\QLTV.FormStatistics.resources
+D:\DACS2 - Copy\QLTV\QLTV\obj\Debug\QLTV.csproj.AssemblyReference.cache
+D:\DACS2 - Copy\QLTV\QLTV\obj\Debug\QLTV.FormBookBorrow.resources
+D:\DACS2 - Copy\QLTV\QLTV\obj\Debug\QLTV.FormEditAccount.resources
+D:\DACS2 - Copy\QLTV\QLTV\obj\Debug\QLTV.FormImportBook.resources
+D:\DACS2 - Copy\QLTV\QLTV\obj\Debug\QLTV.FormLogin.resources
+D:\DACS2 - Copy\QLTV\QLTV\obj\Debug\QLTV.FormMain.resources
+D:\DACS2 - Copy\QLTV\QLTV\obj\Debug\QLTV.FormPayBook.resources
+D:\DACS2 - Copy\QLTV\QLTV\obj\Debug\QLTV.FormPenalize.resources
+D:\DACS2 - Copy\QLTV\QLTV\obj\Debug\QLTV.FormQuanLi.resources
+D:\DACS2 - Copy\QLTV\QLTV\obj\Debug\QLTV.FormStatistics.resources
+D:\DACS2 - Copy\QLTV\QLTV\obj\Debug\QLTV.Properties.Resources.resources
+D:\DACS2 - Copy\QLTV\QLTV\obj\Debug\QLTV.csproj.GenerateResource.cache
+D:\DACS2 - Copy\QLTV\QLTV\obj\Debug\QLTV.csproj.CoreCompileInputs.cache
+D:\DACS2 - Copy\QLTV\QLTV\obj\Debug\QLTV.exe
+D:\DACS2 - Copy\QLTV\QLTV\obj\Debug\QLTV.pdb
+D:\DACS2 - Copy\QLTV\QLTV\bin\Debug\QLTV.exe
+D:\DACS2 - Copy\QLTV\QLTV\bin\Debug\QLTV.pdb
+D:\DA2\QLTV\QLTV\bin\Debug\QLTV.exe
+D:\DA2\QLTV\QLTV\bin\Debug\QLTV.pdb
+D:\DA2\QLTV\QLTV\obj\Debug\QLTV.csproj.AssemblyReference.cache
+D:\DA2\QLTV\QLTV\obj\Debug\QLTV.FormBookBorrow.resources
+D:\DA2\QLTV\QLTV\obj\Debug\QLTV.FormEditAccount.resources
+D:\DA2\QLTV\QLTV\obj\Debug\QLTV.FormImportBook.resources
+D:\DA2\QLTV\QLTV\obj\Debug\QLTV.FormLogin.resources
+D:\DA2\QLTV\QLTV\obj\Debug\QLTV.FormMain.resources
+D:\DA2\QLTV\QLTV\obj\Debug\QLTV.FormPayBook.resources
+D:\DA2\QLTV\QLTV\obj\Debug\QLTV.FormPenalize.resources
+D:\DA2\QLTV\QLTV\obj\Debug\QLTV.FormQuanLi.resources
+D:\DA2\QLTV\QLTV\obj\Debug\QLTV.FormStatistics.resources
+D:\DA2\QLTV\QLTV\obj\Debug\QLTV.Properties.Resources.resources
+D:\DA2\QLTV\QLTV\obj\Debug\QLTV.csproj.GenerateResource.cache
+D:\DA2\QLTV\QLTV\obj\Debug\QLTV.csproj.CoreCompileInputs.cache
+D:\DA2\QLTV\QLTV\obj\Debug\QLTV.exe
+D:\DA2\QLTV\QLTV\obj\Debug\QLTV.pdb
+D:\DA2\QLTV\QLTV\bin\Debug\QLTV.exe.config
+D:\DA2\QLTV\QLTV\bin\Debug\GrapeCity.DataVisualization.Chart.dll
+D:\DA2\QLTV\QLTV\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\DA2\QLTV\QLTV\bin\Debug\System.Buffers.dll
+D:\DA2\QLTV\QLTV\bin\Debug\System.Memory.dll
+D:\DA2\QLTV\QLTV\bin\Debug\System.Numerics.Vectors.dll
+D:\DA2\QLTV\QLTV\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\DA2\QLTV\QLTV\bin\Debug\System.Text.Encodings.Web.dll
+D:\DA2\QLTV\QLTV\bin\Debug\System.Text.Json.dll
+D:\DA2\QLTV\QLTV\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\DA2\QLTV\QLTV\bin\Debug\System.ValueTuple.dll
+D:\DA2\QLTV\QLTV\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\DA2\QLTV\QLTV\bin\Debug\System.Buffers.xml
+D:\DA2\QLTV\QLTV\bin\Debug\System.Memory.xml
+D:\DA2\QLTV\QLTV\bin\Debug\System.Numerics.Vectors.xml
+D:\DA2\QLTV\QLTV\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\DA2\QLTV\QLTV\bin\Debug\System.Text.Encodings.Web.xml
+D:\DA2\QLTV\QLTV\bin\Debug\System.Text.Json.xml
+D:\DA2\QLTV\QLTV\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\DA2\QLTV\QLTV\bin\Debug\System.ValueTuple.xml
+D:\DA2\QLTV\QLTV\bin\Debug\zh\GrapeCity.DataVisualization.Chart.resources.dll
+D:\DA2\QLTV\QLTV\obj\Debug\QLTV.FormStatisticChart.resources
+D:\DA2\QLTV\QLTV\obj\Debug\QLTV.csproj.CopyComplete
